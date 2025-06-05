@@ -17,13 +17,12 @@ fernet = Fernet(key)
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  
 server.bind(("0.0.0.0", 8080)) #think of this like "hey computer i wanna listen on this port"
 server.listen(1)
-print("[+] Server is listening, waiting for a client to connect...")
+print("Server is listening, waiting for a client to connect...")
 
 
 #accept an incoming connection from a client.
 conn, addr = server.accept()
-print(f"[DEBUG] Accepted connection from {addr}")
-print(f"[+] Connection established with {addr}")
+print(f"Connection established with {addr}")
 
 
 while True:
